@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://will-satterthwaite.github.io/wildfire-medical-app",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "export": "next export",
+  "deploy": "npm run build && npm run export && gh-pages -d out"
+},
   "dependencies": {
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.3",
