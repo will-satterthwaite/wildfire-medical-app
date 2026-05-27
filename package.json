@@ -2,7 +2,7 @@
   "name": "wildfire-medical-readiness",
   "version": "0.1.0",
   "private": true,
-"homepage": "https://will-satterthwaite.github.io/wildfire-medical-app",
+  "homepage": "https://will-satterthwaite.github.io/wildfire-medical-app",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
