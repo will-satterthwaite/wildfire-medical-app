@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Aptos", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
+
+  --background: 43 36% 96%;
+  --foreground: 145 18% 13%;
+  --card: 42 38% 99%;
+  --card-foreground: 145 18% 13%;
+  --border: 42 18% 82%;
+  --muted: 45 24% 90%;
+  --muted-foreground: 139 8% 39%;
+  --primary: 147 39% 24%;
+  --primary-foreground: 42 30% 96%;
+  --accent: 24 88% 52%;
+  --accent-foreground: 36 35% 96%;
+  --danger: 5 68% 44%;
+  --danger-foreground: 36 35% 96%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  min-height: 100%;
+  background: hsl(var(--background));
+}
+
+body {
+  min-height: 100%;
+  color: hsl(var(--foreground));
+  background:
+    linear-gradient(180deg, rgba(250, 248, 242, 0.98), rgba(238, 232, 218, 0.98)),
+    radial-gradient(circle at 82% -10%, rgba(232, 103, 35, 0.16), transparent 34%);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .field-panel {
+    @apply rounded-lg border bg-card text-card-foreground shadow-field;
+  }
+
+  .status-chip {
+    @apply inline-flex items-center gap-2 rounded-md border px-2.5 py-1 text-xs font-bold uppercase tracking-normal;
+  }
+}
